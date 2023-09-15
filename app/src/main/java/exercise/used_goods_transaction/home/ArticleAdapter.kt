@@ -32,22 +32,17 @@ class ArticleAdapter(val onItemClicked: (ArticleModel) -> Unit) :
             binding.dateTextView.text = format.format(date).toString()
             binding.priceTextView.text = articleModel.price
 
-            if(articleModel.imageUrl.isNotEmpty()){
+            if (articleModel.imageUrl.isNotEmpty()) {
                 Glide.with(binding.thumbnailImageView)
                     .load(articleModel.imageUrl)
                     .into(binding.thumbnailImageView)
             }
-
 
             binding.root.setOnClickListener {
                 // onItemClicked로 람다 형식의 함수가 넘어왔고
                 // 그 함수에 articleModel을 인자로 넣은 것
                 onItemClicked(articleModel)
             }
-
-
-
-
         }
     }
 
@@ -67,8 +62,8 @@ class ArticleAdapter(val onItemClicked: (ArticleModel) -> Unit) :
         holder.bind(currentList[position])
     }
 
-    companion object{
-        val diffUtil = object : DiffUtil.ItemCallback<ArticleModel>(){
+    companion object {
+        val diffUtil = object : DiffUtil.ItemCallback<ArticleModel>() {
             override fun areItemsTheSame(oldItem: ArticleModel, newItem: ArticleModel): Boolean {
 
                 return oldItem.createAt == newItem.createAt
@@ -81,8 +76,6 @@ class ArticleAdapter(val onItemClicked: (ArticleModel) -> Unit) :
 
         }
     }
-
-
 
 
 }
