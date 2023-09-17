@@ -3,4 +3,7 @@
     <string name="homeString">홈</string>
     <string name="chatString">채팅</string>
     <string name="myPageString">나의 정보</string>
+    <string name="signUpBtn">회원가입</string>
+    <string name="longinBtn">로그인</string>
+
 </resources>
