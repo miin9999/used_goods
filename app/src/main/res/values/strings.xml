@@ -6,4 +6,10 @@
     <string name="signUpBtn">회원가입</string>
     <string name="longinBtn">로그인</string>
 
+    <string name="itemRegistration">물품 등록</string>
+    <string name="itemTitleString">글 제목</string>
+    <string name="priceString">가격</string>
+    <string name="imageRegistration">이미지 등록하기</string>
+    <string name="Registration">등록하기</string>
+
 </resources>

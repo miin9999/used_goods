@@ -8,5 +8,5 @@ data class ArticleModel (
     val price : String,
     val imageUrl : String,
 ){
-    constructor() : this("","",0,"","")
+    constructor(): this("","",0,"","")
 }
