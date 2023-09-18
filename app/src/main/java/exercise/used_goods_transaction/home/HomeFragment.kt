@@ -19,7 +19,6 @@ import com.google.firebase.ktx.Firebase
 import exercise.used_goods_transaction.DBkeys
 import exercise.used_goods_transaction.DBkeys.Companion.CHILD_CHAT
 import exercise.used_goods_transaction.DBkeys.Companion.DB_ARTICLES
-import exercise.used_goods_transaction.DBkeys.Companion.DB_CHAT
 import exercise.used_goods_transaction.DBkeys.Companion.DB_USERS
 import exercise.used_goods_transaction.R
 import exercise.used_goods_transaction.chatList.ChatListItem
