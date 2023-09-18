@@ -12,4 +12,7 @@
     <string name="imageRegistration">이미지 등록하기</string>
     <string name="Registration">등록하기</string>
 
+
+    <string name="chatting_list">채팅방 리스트</string>
+
 </resources>
