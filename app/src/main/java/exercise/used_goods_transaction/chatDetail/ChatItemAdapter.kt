@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import exercise.used_goods_transaction.databinding.ItemChatBinding
 
 
-class ChatItemAdapter : ListAdapter<ChatItem, ChatItemAdapter.ViewHolder>(diffUtil) {
+class ChatItemAdapter : ListAdapter<chatItem, ChatItemAdapter.ViewHolder>(diffUtil) {
 
     inner class ViewHolder(private val binding :ItemChatBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(chatItem : ChatItem){
+        fun bind(chatItem : chatItem){
             binding.senderTextView.text = chatItem.senderId
             binding.messageTextView.text = chatItem.message
 
@@ -28,11 +28,11 @@ class ChatItemAdapter : ListAdapter<ChatItem, ChatItemAdapter.ViewHolder>(diffUt
     }
 
     companion object{
-        val diffUtil = object : DiffUtil.ItemCallback<ChatItem>(){
-            override fun areItemsTheSame(oldItem: ChatItem, newItem: ChatItem): Boolean {
+        val diffUtil = object : DiffUtil.ItemCallback<chatItem>(){
+            override fun areItemsTheSame(oldItem: chatItem, newItem: chatItem): Boolean {
                 return oldItem == newItem
             }
-            override fun areContentsTheSame(oldItem: ChatItem, newItem: ChatItem): Boolean {
+            override fun areContentsTheSame(oldItem: chatItem, newItem: chatItem): Boolean {
                 return oldItem == newItem
             }
         }

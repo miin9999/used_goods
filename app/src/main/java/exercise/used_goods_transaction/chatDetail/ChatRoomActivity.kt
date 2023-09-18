@@ -26,7 +26,7 @@ class ChatRoomActivity : AppCompatActivity() {
 
     private val adapter = ChatItemAdapter()
     private var chatDB: DatabaseReference? = null
-    private val chatList = mutableListOf<ChatItem>()
+    private val chatList = mutableListOf<chatItem>()
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +38,7 @@ class ChatRoomActivity : AppCompatActivity() {
 
         chatDB?.addChildEventListener(object:ChildEventListener{
             override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-                val chatItem = snapshot.getValue(ChatItem::class.java)
+                val chatItem = snapshot.getValue(chatItem::class.java)
                 chatItem ?: return
 
                 chatList.add(chatItem)
@@ -57,7 +57,7 @@ class ChatRoomActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.sendButton).setOnClickListener {
 
-            val chatItem = ChatItem(
+            val chatItem = chatItem(
                 senderId = auth.currentUser!!.uid,
                 message = findViewById<EditText>(R.id.messageEditText).text.toString()
             )

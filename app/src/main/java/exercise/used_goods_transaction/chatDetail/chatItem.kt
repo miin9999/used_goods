@@ -1,6 +1,6 @@
 package exercise.used_goods_transaction.chatDetail
 
-data class ChatItem (
+data class chatItem (
     val senderId: String,
     val message: String,
         ){
